@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pesquisa Cliente Juridico</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+  <script type="text/javascript">
+    function alerta(){
+      alert("Cadastro de Cliente Físico feito com sucesso!");
+    }
+  </script>
+</head>
+<body>
+	<nav class="navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
+        <span class="sr-only">Alternar menu</span>
+        <span class="icon-bar" style="background: white;"></span>
+        <span class="icon-bar" style="background: white;"></span>
+        <span class="icon-bar" style="background: white;"></span>
+           </button>
+        </div>
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span> </a>
+              <ul class="dropdown-menu">
+                <li><a href="cadastrocliente.html">Cliente Físico</a></li>
+                <li><a href="cadastroempresa.html">Cliente Jurídico</a></li>
+                <li><a href="cadastrofornecedor.html">Fornecedor</a></li>
+                <li><a href="cadastroproduto.html">Produto</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Pesquisar <span class="caret"></span> </a>
+              <ul class="dropdown-menu">
+                <li><a href="pesquisacliente.html">Cliente Físico</a></li>
+                <li><a href="pesquisaempresa.html">Cliente Jurídico</a></li>
+                <li><a href="pesquisafornecedor.html">Fornecedor</a></li>
+                <li><a href="pesquisaproduto.html">Produto</a></li>
+              </ul>
+            </li>
+            <li>
+            <a href="index.html">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- fim da barra de navegacao -->
+
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-xs-12">
+        <div class="col-xs-0 col-md-2"></div>
+        <div class="col-xs-8 col-md-6">
+          <input type="text" class="form-control" placeholder="Pesquisar Clientes">
+        </div>
+        <div class="col-xs-4 col-md-2">
+          <span class="input-group-btn">
+            <button class="btn btn-success btn-block" type="button">Ir!</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-xs-12">
+        <div class="col-md-2 col-xs-0"></div>
+        <div class="col-xs-12 col-md-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">Clientes Cadastrados</div>
+            <!-- Table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>CNPJ</th>
+                  <th>Razão Social</th>
+                  <th>Endereço</th>
+                  <th>Telefone</th>
+                  <th>Cartão</th>
+                  <th>Email</th>
+                  <th>Alterar</th>
+                  <th>Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Academia Saúde</td>
+                  <td>12312312</td>
+                  <td>38888</td>
+                  <td>Rua Brasil, 601</td>
+                  <td>12398981</td>
+                  <td>123123</td>
+                  <td>acad@ acad.com</td>
+                  <td><a href="#" class="btn btn-warning">Alterar</a></td>
+                  <td><a href="#" class="btn btn-danger">Excluir</a></td>
+                </tr>
+                <tr>
+                  <td>Academia +</td>
+                  <td>123459312</td>
+                  <td>3881238</td>
+                  <td>Rua 2, 61</td>
+                  <td>1239581</td>
+                  <td>1231133</td>
+                  <td>acad@ acadmais.com</td>
+                  <td><a href="#" class="btn btn-warning">Alterar</a></td>
+                  <td><a href="#" class="btn btn-danger">Excluir</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

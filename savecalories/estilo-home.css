@@ -1,0 +1,96 @@
+.nav>li>a{
+	background-color: black;
+	color: white;
+}
+
+.nav>li>a:hover{
+	color: #8181f7;
+	background-color: black;
+}
+
+.foto-logo{
+	height: 60px;
+	margin-left: 40px;
+	background: w;
+}
+
+.paginainicial-logo{
+	height: 50px;
+	margin-top: -20px;
+}
+
+.naveg-home{
+	background-color: #000;
+	padding: 10px;
+}
+
+.formatacao-home{
+	margin-right: 50px;
+}
+
+.formatacao-link-home{
+	margin-right: 20px;
+}
+
+body{
+	background: url('imagens/fundo-home.jpg') center center fixed;
+	padding-top: 10px;
+}
+
+.botao_cancelar{
+	background-color: #ff1111;
+	color: white;
+	border: 1px solid black;
+	border-radius: 300px;
+}
+
+.botao_cancelar:hover{
+	background-color: #ff8282;
+	color: black;
+	border: 1px solid black;
+	transition: 1.5s;
+}
+
+.botao_enviar{
+	background-color: #0000fb ;
+	color: white;
+	border-radius: 300px;
+	border: 1px solid black;
+}
+
+.botao_enviar:hover{
+	background-color: #6f6fff;
+	color: black;
+	border: 1px solid black;
+	transition: 1.5s;
+}
+
+.circulo{
+	border-radius: 100%;
+	border: 1px solid black;
+	width: 150px;
+	height: 150px;
+	background-image: url('imagens/foto.jpg');
+}
+
+.formatacao-dados{
+	margin-left: 50px;
+	font-size: 18px;
+}
+
+.rodape{
+	background-color: black;
+	margin-top: 50px;
+}
+
+.botao_dados{
+	background-color: #8a8a8a;
+	border: 1px solid black;
+}
+
+.cadastro{
+	font: 16px/2em Lato, serif;
+	margin: 0px auto;
+	max-width: 800px;
+	background-color: #cccccc;
+}

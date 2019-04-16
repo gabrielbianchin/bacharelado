@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<script type="text/javascript">
+	function Factory() {
+        this.criarUsuario = function (nome,cpf,endereco,telefone,cargo,email,senha) {
+            var usuario;
+     
+            if (cargo === "gerente") {
+                usuario = new Gerente();
+            } 
+            else if (cargo === "funcionario") {
+                usuario = new Funcionario();
+            }
+     
+            usuario.nome = nome;
+            usuario.cpf = cpf;
+            usuario.endereco = endereco;
+            usuario.telefone = telefone;
+            usuario.email = email;
+            usuario.senha = senha;
+
+            usuario.say = function () {
+                log.add("Design Pattern: Factory Method\nNome: " + this.nome + "\nCPF: " + this.cpf + "\nEndereço: " + this.endereco + "\nTelefone: " + this.telefone + "\nCargo/Salario: " + this.cargosalario + "\nEmail: " + this.email + "\nSenha: " + this.senha + "\nCadastro Realizado com sucesso!");
+            }
+     
+            return usuario;
+        }
+    }
+     
+    var Gerente = function () {
+        this.cargosalario = "Gerente - Salario R$ 5000";
+    };
+     
+    var Funcionario = function () {
+        this.cargosalario = "Funcionario - Salario R$ 2000";
+    };
+     
+    // log helper
+    var log = (function () {
+        var log = "";
+     
+        return {
+            add: function (msg) { log += msg + "\n"; },
+            show: function () { alert(log); log = ""; }
+        }
+    })();
+     
+    function run() {
+        var usuario;
+        var factory = new Factory();
+     
+        var nome = document.getElementById("nome").value;
+        var cpf = document.getElementById("cpf").value;
+        var endereco = document.getElementById("endereco").value;
+        var telefone = document.getElementById("telefone").value;
+        var cargo = document.getElementById("cargo").value;
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+        if(nome == "" || cpf == "" || endereco == "" || telefone == "" || cargo == "" || email == "" || senha == ""){
+        	alert("Preencha todos os campos");
+        }
+        else{
+        	usuario = (factory.criarUsuario(nome,cpf,endereco,telefone,cargo,email,senha));
+        	usuario.say();
+    	    log.show();
+    	    var a = document.getElementById("link");
+    	    a.href="index.html";
+    	}
+    }
+	</script>
+</head>
+<body>
+	<div class="container">
+			<div class="cadastro-form">
+				<form method="post" role="login">
+					<input type="text" name="nome" id="nome" placeholder="Nome" required class="form-control input-lg">
+					<input type="text" name="cpf" id="cpf" placeholder="CPF" required class="form-control input-lg">
+					<input type="text" name="endereco" id="endereco" placeholder="Endereço" required class="form-control input-lg">
+					<input type="text" name="telefone" id="telefone" placeholder="Telefone" required class="form-control input-lg">
+					<select class="form-control" id="cargo">
+						<option value="">Escolha um cargo</option>
+						<option value="funcionario">Funcionário</option>
+						<option value="gerente">Gerente</option>
+					</select>
+					<input type="email" name="email" id="email" placeholder="E-mail" required class="form-control input-lg">
+					<input type="password" name="senha" id="senha" placeholder="Senha" required class="form-control input-lg">
+					<a href="#" id="link" class="btn btn-lg btn-primary btn-block" onclick="run();">Cadastrar</a>
+				</form> 
+			</div>
+	</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

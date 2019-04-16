@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+/* ================================ PAGINA PRINCIPAL ========================*/
+.navegacao{
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+
+
+.paginainicial-logo{
+	height: 50px;
+	margin-top: -20px;
+}
+
+.foto-logo{
+	height: 60px;
+	margin-left: 40px;
+	background: black;
+}
+
+.botao_telamenor{
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px solid black;
+}
+
+.nav>li>a{
+	color: white;
+}
+
+.nav>li>a:hover {
+	background: none;
+	color: #8181f7;
+}
+
+.fundo_imagem{
+	background: url(imagens/fundo_inicial.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+.capa{
+	background: white;
+	padding: 20px 0px;
+}
+
+.titulo_principal{
+	text-align: center;
+	color: black;
+	padding: 120px 0px;
+	background-color: rgba(255, 255, 255, 0.005);
+}
+
+.botao_premium{
+	border-radius: 500px;
+	background-color: rgba(0,0,255,0.7);
+	border: 1px solid white;
+	color: white;
+	width: 300px;
+}
+
+.botao_premium:hover{
+	color:black;
+	background-color: white;
+	border: 1px solid black;
+}
+
+.rodape_inicial{
+	margin-top: 120px;
+	padding-top: 50px;
+	background-color: black;
+}
+
+/* ============================= LOGIN ==================================== */
+
+.foto-fundo {
+	background: url(imagens/fundo_login.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-form {
+    font: 16px/2em Lato, serif;
+	margin: 100px auto;
+	max-width: 400px;
+}
+
+.cadastro{
+	font: 16px/2em Lato, serif;
+	margin: 0px auto;
+	max-width: 800px;
+}
+
+.redefinir{
+	margin-top: 120px;
+}
+
+form[role=login] {
+	color: #5d5d5d;
+	background: #f2f2f2;
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	form[role=login] img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	form[role=login] input,
+	form[role=login] button {
+		font-size: 18px;
+		margin: 16px 0;
+	}
+	form[role=login] > div {
+		text-align: center;
+	}
+	
+
+/* ========================================== HOME =========================================*/

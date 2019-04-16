@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro Produto</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+  <script type="text/javascript">
+    function Factory() {
+        this.criarUsuario = function (nome,desc,estoque,unidade,estoqueminimo) {
+
+            var usuario;
+     
+            usuario = new Cadastro();
+            
+            usuario.nome = nome;
+            usuario.desc = desc;
+            usuario.estoque = estoque;
+            usuario.unidade = unidade;
+            usuario.estoqueminimo = estoqueminimo;
+            
+            usuario.say = function () {
+                log.add("Design Pattern: Factory Method\n" + this.cadastro +"\nNome: " + this.nome + "\Descrição: " + this.desc + "\nEstoque: " + this.estoque + "\nUnidade: " + this.unidade + "\nEstoque mínimo: " + this.estoqueminimo + "\nCadastro Realizado com sucesso!");
+            }
+     
+            return usuario;
+        }
+    }
+
+    var Cadastro = function (nome) {
+        this.cadastro = "Cadastro de Produto";
+    };
+
+    // log helper
+    var log = (function () {
+        var log = "";
+     
+        return {
+            add: function (msg) { log += msg + "\n"; },
+            show: function () { alert(log); log = ""; }
+        }
+    })();
+     
+    function run() {
+        var usuario;
+        var factory = new Factory();
+     
+        var nome = document.getElementById("nome").value;
+        var desc = document.getElementById("desc").value;
+        var estoque = document.getElementById("estoque").value;
+        var unidade = document.getElementById("unidade").value;
+        var estoqueminimo = document.getElementById("estoqueminimo").value;
+        
+
+        if(nome == "" || desc == "" || estoque == "" || unidade == "" || estoqueminimo == ""){
+          alert("Preencha todos os campos");
+        }
+        else{
+          usuario = (factory.criarUsuario(nome,desc,estoque,unidade,estoqueminimo));
+          usuario.say();
+          log.show();
+          var a = document.getElementById("link");
+          a.href="home.html";
+      }
+    }
+  </script>
+</head>
+<body>
+	<nav class="navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
+        <span class="sr-only">Alternar menu</span>
+        <span class="icon-bar" style="background: white;"></span>
+        <span class="icon-bar" style="background: white;"></span>
+        <span class="icon-bar" style="background: white;"></span>
+           </button>
+        </div>
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span> </a>
+              <ul class="dropdown-menu">
+                <li><a href="cadastrocliente.html">Cliente Físico</a></li>
+                <li><a href="cadastroempresa.html">Cliente Jurídico</a></li>
+                <li><a href="cadastrofornecedor.html">Fornecedor</a></li>
+                <li><a href="cadastroproduto.html">Produto</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Pesquisar <span class="caret"></span> </a>
+              <ul class="dropdown-menu">
+                <li><a href="pesquisacliente.html">Cliente Físico</a></li>
+                <li><a href="pesquisaempresa.html">Cliente Jurídico</a></li>
+                <li><a href="pesquisafornecedor.html">Fornecedor</a></li>
+                <li><a href="pesquisaproduto.html">Produto</a></li>
+              </ul>
+            </li>
+            <li>
+            <a href="index.html">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- fim da barra de navegacao -->
+    
+	<div class="container" style="margin-top: 50px;">
+			<div class="cadastro-form">
+				<form method="post" role="login">
+					<input type="text" name="nome" id="nome" placeholder="Nome" required class="form-control input-lg">
+					<input type="text" name="desc" id="desc" placeholder="Descrição" class="form-control input-lg">
+					<input type="text" name="estoque" id="estoque" placeholder="Estoque" required class="form-control input-lg">
+					<input type="text" name="unidade" id="unidade" placeholder="Unidade" required class="form-control input-lg">
+					<input type="text" name="estoqueminimo" id="estoqueminimo" placeholder="Estoque Mínimo" required class="form-control input-lg">
+					<a href="#" id="link" class="btn btn-lg btn-primary btn-block" onclick="run()">Cadastrar</a>
+				</form>
+			</div>
+	</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

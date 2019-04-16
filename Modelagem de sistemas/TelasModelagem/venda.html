@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+</head>
+<body>
+	<nav class="navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
+        <span class="sr-only">Alternar menu</span>
+        <span class="icon-bar" style="background: white;"></span>
+        <span class="icon-bar" style="background: white;"></span>
+        <span class="icon-bar" style="background: white;"></span>
+           </button>
+        </div>
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+            	<a href="" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span> </a>
+            	<ul class="dropdown-menu">
+            		<li><a href="cadastrocliente.html">Cliente Físico</a></li>
+            		<li><a href="cadastroempresa.html">Cliente Jurídico</a></li>
+            		<li><a href="cadastrofornecedor.html">Fornecedor</a></li>
+            		<li><a href="cadastroproduto.html">Produto</a></li>
+            	</ul>
+            </li>
+          	<li>
+          		<a href="" class="dropdown-toggle" data-toggle="dropdown">Pesquisar <span class="caret"></span> </a>
+            	<ul class="dropdown-menu">
+            		<li><a href="pesquisacliente.html">Cliente Físico</a></li>
+            		<li><a href="pesquisaempresa.html">Cliente Jurídico</a></li>
+            		<li><a href="pesquisafornecedor.html">Fornecedor</a></li>
+            		<li><a href="pesquisaproduto.html">Produto</a></li>
+            	</ul>
+          	</li>
+          	<li>
+      			<a href="index.html">Sair</a>
+          	</li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- fim da barra de navegacao -->
+
+
+<div class="container" style="margin-top: 50px;">
+      <div class="cadastro-form">
+        <form method="post" role="login">
+          <select class="form-control" id="cargo">
+            <option value="">Escolha um cliente</option>
+            <option value="funcionario">Joaquim Teixeira</option>
+            <option value="gerente">João Gabriel</option>
+            <option value="funcionario">Academia Saúde</option>
+            <option value="funcionario">Academia +</option>
+          </select>
+
+          <select class="form-control" id="cargo" style="margin-top: 20px;">
+            <option value="">Escolha um produto</option>
+            <option value="funcionario">Camiseta Animal</option>
+            <option value="gerente">Whey Protein</option>
+            <option value="funcionario">Creatina</option>
+          </select>
+
+          <input type="text" name="" class="form-control input-lg" placeholder="Quantidade">
+          
+          <a href="home.html" id="link" class="btn btn-lg btn-primary btn-block">Vender</a>
+        </form> 
+      </div>
+  </div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
